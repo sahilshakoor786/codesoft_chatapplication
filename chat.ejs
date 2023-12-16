@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html >
+    <head lang="en">
+        <title><%= GRPname%></title>
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <meta name="BFF's chatpage"  content="This is the chat page of bff designed to chat with people and tell them indirectly whether they are  liking the chat or not.">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="UTF-8">
+
+<!--   <link rel="stylesheet" type="text/css" href="chat.css">-->
+        <script src='https://kit.fontawesome.com/a076d05399.js' ></script>     
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script crossorigin="anonymous" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script crossorigin="anonymous"  src="/socket.io/socket.io.js"></script>
+        <script src="chat.js" defer></script>
+<link rel="stylesheet" href="chat.css">
+    </head>
+    <body style="background-color:rgb(17, 17, 17) ">
+        <div id = "usrgroupname"><h1><%= GRPname %></h1></div>
+        <form action="/file" method="POST" enctype="multipart/form-data" id="fileform" hidden="hidden">
+        <input type="file"  name="files"  id="filebtn" multiple>
+        <button type="submit" id="sbtn"></button>
+        </form>
+<div id="msgconnected" style="height: 100%;position: absolute;
+border-top: 2px solid black;
+width: 24%;
+margin: 0;
+padding:0;
+left: 0;"></div>
+<div id="maindiv" style="width: 76%;height: 100%;margin-left: 24%;right: 0;position: absolute">
+  <div type="text" contenteditable="true" id="messages" value="Enter your message..." ></div>
+ <!-- <i class="fa fa-bold" id="bold"></i>--><button id="sendbtn" class="sendbtn">~></button><i class="fas fa-paper-plane" id='sendicon'></i>
+<i id="imgicon" class="far fa-image"></i>
+</div>
+<div id="msgdiv">
+   <div id ="chat-box" class="chat-box">
+<div id="chatmsg" class=""></div>
+<div id="selfmsg" class=""></div>
+   </div> 
+</div>
+<i class="far fa-star" id='likostar'></i>
+<div id="UsersName">
+    <label for="username" style="position:absolute;color: blanchedalmond;right:210px;margin-top: 18px;font-weight:bold;font-size: 1.2rem;"><span  style="color:rgb(7, 58, 146);border-bottom: aliceblue 2px solid ">Your</span> <span style="border-top: rgb(7, 58, 146) 2px solid ">Name</span></label>
+<input type="text" id='username'style="position: relative;width:38%;border-radius:25px;top:35%;margin-left: 31%;text-align: center" placeholder="Enter your Name">
+<p id="nameinfo">Name must be less than of <span style="color:rgb(7, 58, 146)">10</span> characters</p>
+<button id="namesubmit">Submit</button>
+</div>  
+<div id="ppup"class="ppup"></div>
+<div id="dividor"></div>
+<i class="fas fa-chevron-up" id="likometer"></i>
+<i class="fas fa-chevron-up" id="usersGrp" style="visibility: hidden"></i>
+<button id="leavebtn">Leave</button>
+<div id="likodiv">
+
+</div>
+
+<div id="likostardiv">
+
+</div>
+<div id="loading">
+  <div id="loadimg">
+<img  type="image/png" id="aniimg"src="LogoMakerCa-1617875700792.png"/></div>
+<div id="gr"><h2><%=GRPname%></h2></div>
+</div>
+<span id='ssent'></span>
+<script defer>
+
+</script>
+</body>
+</html>

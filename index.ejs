@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BFF</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="favicon.ico"  type="image/x-icon">
+        <script src='https://kit.fontawesome.com/a076d05399.js' ></script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+        <script defer src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+<script defer src="https://0cd1-2409-4063-2190-60f8-b0c9-693b-cee8-c4bb.ngrok.io/socket.io/socket.io.js"></script>
+   <!-- 
+     initialize the SDK after all desired features are loaded, set useEmulator to false
+     to avoid connecting the SDK to running emulators.
+   -->
+
+   <script defer src="client.js"></script>
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+   
+  
+</head>
+<body style="background-color: rgb(17, 17, 17)">
+    <div class="hh" style="
+    margin-top:0;width: 100%;background-color: black;height: 50px">
+    <header style="box-shadow: black ">
+        <div class="brdr"></div>
+        <img src="LogoMakerCa-1617875700792.png" class="logo" alt="">
+        <!-- <link rel="shortcut icon" href="LogoMakerCa-1617875700792.png" type="image/x-icon"> -->
+          <div class="bff" id="bffdiv" style="position:absolute;color:aliceblue;height: 50px;top:-1.5px">       
+        <div style="width: 50%;right: -1%;position: absolute;margin-right: 40%"> <h1 style="position:absolute;height:0px;top:-21px;padding-top:10px;width: 30%;font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;"><i><span class="bwwd" >b</span>FF</i></h1>
+       </div>     <button id="logbtn"class="btn" onclick="logen()">Login</button>
+         </div>     
+        </div>
+<div  id="category">Choose your category <span id=";;">:-</span></div>
+	<div id='loggedUser'><span id="bluee"></span><span id="normal"></span>
+<span id="bluee2">
+</span><span id="normal2"></span></div>
+<div id="loginuser" ></div>
+    </header>
+<div class="lll" >
+    <main style="
+font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+        color: aliceblue;
+width: 18%;
+height: 72.5%;
+position: absolute;
+top: -2.9px;
+margin-top: 133.3px;
+border: 3px solid black;
+text-align: center;">
+        <div id="funny" class="funny" >   <h2>Funny</h2></div>  
+        <div id="Savage"class="Savage"style="border-bottom:1px solid black;border-top:1px solid black">   <h2>Savage</h2></div>  
+        <div id="Intelligent"class="Intelligent"style="border-bottom:1px solid black">   <h2>Intelligent<h2></div>  
+       <div class="Entertainer" id="Entertainer"style="border-bottom:1px solid black">   <h2>Entertainer</h2></div>  
+    </main>
+</div>   
+<div class="content-div" style="justify-content:center;text-align:center"><h2 id="cont-head" class="cont-head">Welcome to bff</h2>
+<div id="grp-names"><h3 style="top:-80px;position:relative">bff is a website for making new friends worldwide.</h3><p style="position:relative;font-weight:700;top:-65px;font-family:Bookman, URW Bookman L, serif"> Here you can choose the kind of people you like , get to know them and eventually make them your bestfriend 
+. you can select the maximum number of people in a chat in a chat you will be provided a <i style="color:#16a2ba">likometer</i> which you can use to tell the other persons how much you like them
+</p></div>
+<button id="createbtn">Create new group</button>
+ <input placeholder="Search your groups" onchange="searchgrp()" id="search-bar"type="text"/>
+ <i class='far fa-paper-plane' id="plane"style='font-size:36px'></i>
+<i class="fas fa-search" id="searchicon" onclick="searchgrp()"></i>
+</div>
+<footer ><img id = "footimg"src="LogoMakerCa-1617875700792.png" style="position:relative;width:685px;
+margin-top:335px;margin-left:24%" alt=""/></footer>
+<button id="logbtn2"  onclick="logen2()">Login</button>
+
+</body>
+</html>
